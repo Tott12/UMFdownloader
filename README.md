@@ -60,6 +60,42 @@ The downloaded file will be saved to your destination folder.
 - Download `UMFdownloaded.zip` from the releases page, extract it, and run **`UMF.exe`** on Windows (the `yt-dlp` binary is bundled inside).
 - Accept the license on first launch, then paste and download your video as above.
 
+## 🌐 Chrome Extension (IDM-style floating download button)
+
+You can now use UMFdownloaded as a **Chrome extension** that automatically shows a small floating download button (like Internet Download Manager) on any page with a video (YouTube, Facebook, Instagram, TikTok, Twitter/X, Vimeo, Reddit...).
+
+### Files
+- `extension/manifest.json` — Chrome extension manifest (MV3) with content script injection.
+- `extension/content.js` — Detects the `<video>` element and injects the small floating button at the top of the page.
+- `extension/background.js` — Forwards download requests to the native messaging host.
+- `extension/icons/` — Extension icons.
+
+### 1. Register the Native Messaging Host (Python)
+Create the file:
+```
+C:\Users\<your-user>\AppData\Local\Google\Chrome\User Data\Default\NativeMessagingHosts\com.umfdownloaded.json
+```
+With content:
+```json
+{
+  "name": "com.umfdownloaded",
+  "description": "UMF Native Messaging Host",
+  "path": "C:\\Users\\chems\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "args": ["C:\\UMFDownloader\\native_host.py"]
+}
+```
+
+### 2. Load the Extension
+1. Open Chrome → `chrome://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked**.
+4. Select the `extension` folder: `C:\UMFDownloader\extension`.
+
+### 3. Usage
+- Open YouTube / Facebook / any supported page with a video.
+- A small green **⬇ Download** button appears at the top of the page.
+- Click it → the video downloads automatically via the native host + yt-dlp.
+
 ---
 
 ## 📄 License

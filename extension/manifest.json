@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "UMF Downloader",
+  "version": "1.0.0",
+  "description": "Universal Media File Downloader - one click video downloads from YouTube, Facebook and more",
+  "permissions": ["nativeMessaging"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtube-nocookie.net/*",
+        "*://*.facebook.com/*",
+        "*://*.fbcdn.net/*",
+        "*://*.instagram.com/*",
+        "*://*.tiktok.com/*",
+        "*://*.twitter.com/*",
+        "*://*.vimeo.com/*",
+        "*://*.reddit.com/*",
+        "*://*/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

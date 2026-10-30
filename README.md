@@ -56,8 +56,8 @@ The downloaded file will be saved to your destination folder.
 
 ## 📦 Running the Executable (UMF.exe)
 
-- A ready-to-run Windows executable is provided in the GitHub **Releases** section: `UMF.exe`.
-- Simply download and run `UMF.exe` on Windows (the `yt-dlp` binary is bundled inside).
+- A ready-to-run Windows executable is provided in the GitHub **Releases** section as `UMFdownloaded.zip` (GitHub does not support uploading raw `.exe` files as release assets, so the exe is packaged inside a ZIP).
+- Download `UMFdownloaded.zip` from the releases page, extract it, and run **`UMF.exe`** on Windows (the `yt-dlp` binary is bundled inside).
 - Accept the license on first launch, then paste and download your video as above.
 
 ---

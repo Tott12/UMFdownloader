@@ -18,8 +18,8 @@ A simple GUI application (built with Python `tkinter`) that downloads a **single
 1. **Clone or download this repository:**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/UMFdownloaded.git
-   cd UMFdownloaded
+   git clone https://github.com/Tott12/UMFdownloader.git
+   cd UMFdownloader
    ```
 
 2. **Install the requirements:**

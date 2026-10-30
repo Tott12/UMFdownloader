@@ -80,7 +80,7 @@ With content:
 {
   "name": "com.umfdownloaded",
   "description": "UMF Native Messaging Host",
-  "path": "C:\\Users\\chems\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "path": "C:\\Users\\<your-username>\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "args": ["C:\\UMFDownloader\\native_host.py"]
 }
 ```
